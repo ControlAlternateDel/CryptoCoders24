@@ -1,3 +1,4 @@
+import os
 import customtkinter as ctk
 import pyttsx3
 from time import sleep
@@ -26,10 +27,7 @@ def main():
     global label
     global button
     label.configure(text="Welcome to the Adaptive Test Bot.\nthis bot will take your doubts and give questions with crystal clear explanations that can help alleviate and solve doubts in your mind.\nPlease enter your level(grade)\n", require_redraw=True)
-    start.destroy()
-    sleep(2)
-    level = entry.get()
-    label.configure(text=f"{level}")
+   
 
 def button():
     global button
@@ -45,7 +43,7 @@ def get_entry():
     button = True
     return value
 
-submit = ctk.CTkButton(root, width=100, text="Submit", command=get_entry)
+
 start = ctk.CTkButton(root, text="start", command=main)
 
 submit.place(x=400, y=270)
@@ -53,5 +51,3 @@ entry.place(x=0, y=270)
 start.place(x=250, y=220)
 label.pack()
 root.mainloop()
-
-
