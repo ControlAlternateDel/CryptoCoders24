@@ -20,9 +20,7 @@ def is_ready(cond):
     else:
         return False
 def main():
-    global value
     global label
-    global button
     global root
     label.configure(text="Welcome to the Adaptive Test Bot.\nthis bot will take your doubts and give questions with\n crystal clear explanations that can help alleviate\n and solve doubts in your mind.\nPlease enter your level(grade)\n", require_redraw=True)
     main2()
