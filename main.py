@@ -11,8 +11,6 @@ root.title("Adaptive Test Bot (ATB)")
 buttonpress = False
 entry = ctk.CTkEntry(root, width=400)
 label = ctk.CTkLabel(root)
-label.configure(text="Welcome to the Adaptive Test Bot.")
-sleep(2)
 
 def is_ready(cond):
     if cond:
@@ -20,15 +18,26 @@ def is_ready(cond):
     else:
         return False
 def main():
+    global value
     global label
+    global button
     global root
+    global start
     label.configure(text="Welcome to the Adaptive Test Bot.\nthis bot will take your doubts and give questions with\n crystal clear explanations that can help alleviate\n and solve doubts in your mind.\nPlease enter your level(grade)\n", require_redraw=True)
-    main2()
 
 def main2():
+    global start
     global label
-    print(entry.get())
-    label.configure(text=f"{entry.get()}")
+    start.destroy()
+    level = entry.get()
+
+def get_entry():
+    global button
+    global value
+    global entry
+    value = entry.get()
+    button = True
+    return value
 
 submit = ctk.CTkButton(root, width=100, text="Submit", command=main2)
 start = ctk.CTkButton(root, text="start", command=main)
