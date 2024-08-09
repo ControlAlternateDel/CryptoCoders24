@@ -30,15 +30,7 @@ def main():
 def main2():
     global label
     print(entry.get())
-    label.configure(text=f"{entry.get()}", require_redraw=True)
-
-def get_entry():
-    global button
-    global value
-    global entry
-    value = entry.get()
-    button = True
-    return value
+    label.configure(text=f"{entry.get()}")
 
 submit = ctk.CTkButton(root, width=100, text="Submit", command=main2)
 start = ctk.CTkButton(root, text="start", command=main)
