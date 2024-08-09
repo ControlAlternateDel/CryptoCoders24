@@ -1,9 +1,8 @@
 import os
 import customtkinter as ctk
+import subprocess
 import pyttsx3
 import sys
-
-sys.stdout = open("output.txt", "w")
 
 root = ctk.CTk()
 root.geometry("500x300")
@@ -32,7 +31,8 @@ def main2():
     start.destroy()
     level = entry.get()
     grade, subject = level.split(" ")
-    question = os.system(f"ollama run llama3.1 'give me an extremely hard multiple choice question for grade {grade} about {subject}, but dont provide the answer'")
+    question = subprocess.run(f"ollama run llama3.1 'give me an extremely hard multiple choice question for grade {grade} about {subject}, but dont provide the answer'", capture_output=True, text=True)
+    label.configure(text=f"{question}")
 
 def get_entry():
     global button
