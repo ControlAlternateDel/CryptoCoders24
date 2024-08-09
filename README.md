@@ -8,6 +8,5 @@ Project of the cryptocoders
 * Powered by Llama 3.1 , (Not a paid API).
 * Allows doubts!
 * Allows level change but not subject change.
-* Aimed to better and strengthen concepts of students at any minute and involve them in a competetive environment to increase focus.
-
-
+* Aimed to better and strengthen concepts of students at any minute
+* 
