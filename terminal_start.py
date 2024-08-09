@@ -1,3 +1,5 @@
+# This code is to be used in the terminal and takes the input grade level and returns the window.
+print("Welcome to the Adaptive Test Bot")
 def main():
     print("Welcome to the Adaptive Test Bot")
     level = input("Please enter your level(grade)\n")
