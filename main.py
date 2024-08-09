@@ -31,7 +31,7 @@ def main2():
     start.destroy()
     level = entry.get()
     grade, subject = level.split(" ")
-    os.system(f"ollama run llama3.1 'give me a question for grade {grade} about {subject}'")
+    os.system(f"ollama run llama3.1 'give me a question for grade {grade} about {subject}, but don't provide the answer'")
 
 def get_entry():
     global button
