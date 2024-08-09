@@ -11,6 +11,8 @@ root.title("Adaptive Test Bot (ATB)")
 buttonpress = False
 entry = ctk.CTkEntry(root, width=400)
 label = ctk.CTkLabel(root)
+label.configure(text="Welcome to the Adaptive Test Bot.")
+sleep(2)
 
 def is_ready(cond):
     if cond:
