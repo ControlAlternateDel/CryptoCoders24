@@ -18,13 +18,19 @@ def is_ready(cond):
     else:
         return False
 
+def tksleep(self):
+    self.after(int(2000), self.quit)
+    self.mainloop()
+ctk.tksleep = tksleep
+
 def main():
     global value
     global label
     global button
-    label.configure(text="Welcome to the Adaptive Test Bot.\nthis bot will take your doubts and give questions with crystal clear explanations that can help alleviate and solve doubts in your mind.\nPlease enter your level(grade)\n", require_redraw=True)
+    global root
+    label.configure(text="Welcome to the Adaptive Test Bot.\nthis bot will take your doubts and give questions with\n crystal clear explanations that can help alleviate\n and solve doubts in your mind.\nPlease enter your level(grade)\n", require_redraw=True)
     start.destroy()
-    sleep(2)
+    root.tksleep()
     level = entry.get()
     label.configure(text=f"{level}")
 
