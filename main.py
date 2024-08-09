@@ -1,8 +1,11 @@
 import os
 import customtkinter as ctk
 import pyttsx3
+import sys
 from time import sleep
 from waiting import wait
+
+sys.stdout = open("output.txt", "w")
 
 root = ctk.CTk()
 root.geometry("500x300")
