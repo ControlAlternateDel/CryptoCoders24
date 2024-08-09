@@ -2,8 +2,6 @@ import os
 import customtkinter as ctk
 import pyttsx3
 import sys
-from time import sleep
-from waiting import wait
 
 sys.stdout = open("output.txt", "w")
 
@@ -34,7 +32,7 @@ def main2():
     start.destroy()
     level = entry.get()
     grade, subject = level.split(" ")
-    os.system(f"ollama run llama3.1 'give me a multiple choice question for grade {grade} about {subject}, but dont provide the answer'")
+    question = os.system(f"ollama run llama3.1 'give me an extremely hard multiple choice question for grade {grade} about {subject}, but dont provide the answer'")
 
 def get_entry():
     global button
