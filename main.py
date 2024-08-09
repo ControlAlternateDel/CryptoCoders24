@@ -10,7 +10,7 @@ root.resizable(False, False)
 root.title("Adaptive Test Bot (ATB)")
 buttonpress = False
 entry = ctk.CTkEntry(root, width=400)
-label = ctk.CTkLabel(root)
+label = ctk.CTkLabel(root, text=" ")
 
 def is_ready(cond):
     if cond:
@@ -23,13 +23,15 @@ def main():
     global button
     global root
     global start
-    label.configure(text="Welcome to the Adaptive Test Bot.\nthis bot will take your doubts and give questions with\n crystal clear explanations that can help alleviate\n and solve doubts in your mind.\nPlease enter your level(grade)\n", require_redraw=True)
+    label.configure(text="Welcome to the Adaptive Test Bot.\nthis bot will take your doubts and give questions with\n crystal clear explanations that can help alleviate\n and solve doubts in your mind.\nPlease enter your level(grade), and your subject, separated by a space\n", require_redraw=True)
 
 def main2():
     global start
     global label
     start.destroy()
     level = entry.get()
+    grade, subject = level.split(" ")
+    os.system(f"ollama run llama3.1 'give me a question for grade {grade} about {subject}'")
 
 def get_entry():
     global button
