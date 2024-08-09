@@ -1,5 +1,5 @@
 def main():
-    print("Welcome to the adaptive test bot")
+    print("Welcome to the Adaptive Test bot")
     level = input("Please enter your level(grade)\n")
     subj = input("Please enter your subject\n")
     print("Please confirm that you are in grade " + level + " and your subject is " + subj + "\n You may change either by entering 'change'")
