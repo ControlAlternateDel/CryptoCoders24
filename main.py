@@ -31,7 +31,7 @@ def main2():
     start.destroy()
     level = entry.get()
     grade, subject = level.split(" ")
-    question = subprocess.run(f"ollama run llama3.1 'give me an extremely hard multiple choice question for grade {grade} about {subject}, but dont provide the answer'", capture_output=True, text=True)
+    question = subprocess.check_output(f"ollama run llama3.1 'give me an extremely hard multiple choice question for grade {grade} about {subject}, but dont provide the answer'", shell=True, text=True)
     label.configure(text=f"{question}")
 
 def get_entry():
